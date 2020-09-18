@@ -5,6 +5,7 @@ import AddTodo from './components/AddTodo';
 import Header from './layout/Header';
 //import {v5 as uuid} from "uuid";
 import About from './components/pages/About';
+import Playground from './components/pages/Playground';
 
 import {BrowserRouter as Router, Route} from 'react-router-dom';
 import axios from 'axios';
@@ -44,8 +45,6 @@ class App extends React.Component {
   }
 
   render() {
-    console.log('from app.js');
-
     return (
       <Router>
       <div className="App">
@@ -59,6 +58,9 @@ class App extends React.Component {
           )} />
 
           <Route path="/about" component={About} />
+
+          <Route path="/play" component={Playground} />
+
        </div>
       </div>
       </Router>
